@@ -1,0 +1,9 @@
+*.pdf
+.texpadtmp
+.idea
+*.aux
+*.bbl
+*.log
+*.out
+*.synctex*
+*.blg

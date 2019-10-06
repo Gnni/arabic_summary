@@ -1,0 +1,53 @@
+\documentclass[a4paper]{article}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Arabic Summary}
+\rhead{GH}
+\usepackage{arabxetex} % default option is "novoc"
+                       % other options are "voc", "fullvoc", "utf" and "trans"
+% arabxetex loads bidi.sty and fontspec.sty		    
+\linespread{2}
+\usepackage{fontspec}
+
+%\usepackage{setspace}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.8]{TimesNewRomanPSMT}
+% you can also define \farsifont, \uighurfont, etc if you want
+\usepackage{booktabs}
+\begin{document}
+%This is some text in English with Arabic insertion \textarab{`arabI}.
+%This is some text in English with Arabic insertion \textarab[utf]{عربي}.
+%This is some text in English with Arabic insertion \textarab[voc]{`arabI}.
+
+\begin{arab}[voc]
+
+\section{Numbers -- \arabicfont الأعــداد}
+min sifr 'il_A 'i_tn"An `^sara
+\begin{table}[h]
+\begin{tabular}{@{}l|l|l|l|l|l|l|l@{}}
+ \begin{arab}[voc] 0 \end{arab} &  \begin{arab}[voc] 1 \end{arab} &  \begin{arab}[voc] 2 \end{arab} &  \begin{arab}[voc] 3 \end{arab} &  \begin{arab}[voc] 4 \end{arab} &  \begin{arab}[voc] 5 \end{arab} &  \begin{arab}[voc] 6 \end{arab} &    \begin{arab}[voc] 7 \end{arab} \\ \midrule
+ \begin{arab}[voc] sifr \end{arab} &  
+ \begin{arab}[voc] w"Ahid \end{arab} &  
+ \begin{arab}[voc] 'i_tn"An \end{arab} &  
+ \begin{arab}[voc] _tal"A_ta \end{arab} &  
+ \begin{arab}[voc] 'arb`a \end{arab} &
+ \begin{arab}[voc] _hamsa \end{arab} &
+ \begin{arab}[voc] sittar \end{arab} & 
+ \begin{arab}[voc] sab`T \end{arab}
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\begin{tabular}{@{}l|l|l|l|l|l@{}}
+ \begin{arab}[voc] 8 \end{arab} &  \begin{arab}[voc] 9 \end{arab} & \begin{arab}[voc] 10 \end{arab} &
+ \begin{arab}[voc] 11 \end{arab} &  \begin{arab}[voc] 12 \end{arab} & \begin{arab}[voc] ... \end{arab} \\ \midrule
+ \begin{arab}[voc] _tam"AniyyT \end{arab} & 
+ \begin{arab}[voc]  tis`T \end{arab} & 
+ \begin{arab}[voc] `^sara \end{arab} &
+ \begin{arab}[voc] 'a.hada `^sara \end{arab} & 
+ \begin{arab}[voc]  'i_tn"An `^sara \end{arab} & 
+ \begin{arab}[voc]  ... \end{arab} 
+\end{tabular}
+\end{table}
+
+\end{arab}
+\end{document}
